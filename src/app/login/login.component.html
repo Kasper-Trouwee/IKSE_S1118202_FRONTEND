@@ -1,0 +1,18 @@
+<main class="login__main">
+    <form class="login__form" #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+
+        <h2 class="login__title">Inloggen</h2>
+
+        <div class="login__wraper">
+            <label class="login__form__label" for="email">Email</label>
+            <input ngModel id="email" name="email" class="login__form__input" type="email" placeholder="Email">
+        </div>
+
+        <div class="login__wraper">
+            <label class="login__form__label" for="password">Wachtwoord</label>
+            <input ngModel id="password" name="password" class="login__form__input" type="password" placeholder="Wachtwoord">
+        </div>
+
+        <input class="login__form__submit" type="submit">
+    </form>
+</main>

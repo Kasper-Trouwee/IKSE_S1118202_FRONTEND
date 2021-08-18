@@ -1,0 +1,23 @@
+<main class="register__main">
+    <form class="register__form" #registerForm="ngForm" (ngSubmit)="register(registerForm.value)">
+
+        <h2 class="register__title">Registeren</h2>
+
+        <div class="register__wraper">
+            <label class="register__form__label" for="name">Naam</label>
+            <input ngModel id="name" name="name" class="register__form__input" type="text" placeholder="Naam">
+        </div>
+
+        <div class="register__wraper">
+            <label class="register__form__label" for="email">Email</label>
+            <input ngModel id="email" name="email" class="register__form__input" type="email" placeholder="Email">
+        </div>
+
+        <div class="register__wraper">
+            <label class="register__form__label" for="password">Wachtwoord</label>
+            <input ngModel id="password" name="password" class="register__form__input" type="password" placeholder="Wachtwoord">
+        </div>
+
+        <input class="register__form__submit" type="submit">
+    </form>
+</main>

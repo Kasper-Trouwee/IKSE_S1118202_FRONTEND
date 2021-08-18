@@ -1,0 +1,64 @@
+.register__main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.register__form{
+    width: 90%;
+    background-color: var(--lichtblue);
+    color: var(--pink);
+    padding: 2rem;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.register__title{
+    font-weight: 400;
+    font-size: 200%;
+    padding-bottom: 2rem;
+}
+
+.register__wraper{
+    width: 55%;
+    padding: 0.5rem;
+}
+
+.register__form__label{
+    text-align: left;
+}
+
+.register__form__input{
+    float: right;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+}
+
+.register__form__submit{
+    font-family: 'Rubik', sans-serif;
+    width: 40%;
+    border: none;
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--pink);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 100%;
+    border-radius: 0.8rem;
+}
+
+@media only screen and (min-width: 800px){
+    .register__form__input{
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .register__form{
+        width: 60%;
+    }
+}

@@ -1,0 +1,24 @@
+<main class="toevoegen__main">
+    <form class="toevoegen__form" [formGroup]="form" (ngSubmit)="update()">
+        <h2 class="toevoegen__title">Product Bewerken</h2>
+
+        <div class="toevoegen__wraper">
+            <label class="toevoegen__form__label" for="productname">productname</label>
+            <input formControlName=productname class="toevoegen__form__input" type="text" name="productname" id="productname">
+        </div>
+
+        <div class="toevoegen__wraper">
+            <label class="toevoegen__form__label" for="description">description</label>
+            <textarea formControlName=description class="toevoegen__form__input" ea rows="4" cols="50" name="description" id="description"></textarea>
+        </div>
+
+        <div class="toevoegen__wraper">
+            <label class="toevoegen__form__label" for="price">price</label>
+            <input formControlName=price class="toevoegen__form__input" maxlength="5" type="tel" name="price" id="price">
+        </div>
+
+        <input class="toevoegen__form__submit" type="submit">
+        <a role="button" (click)="delete()">Product Verwijderen</a>
+
+    </form>
+</main>

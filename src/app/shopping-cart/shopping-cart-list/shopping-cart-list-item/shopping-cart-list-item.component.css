@@ -1,0 +1,22 @@
+section{
+    margin: 4rem;
+    padding: 2rem;
+    background-color: var(--pink);
+}
+
+h4{
+    font-weight: 500;
+    font-size: 150%;
+    color: var(--white);
+}
+
+p{
+    margin: 1rem 0;
+}
+
+button{
+    margin-top: 1rem;
+    border: none;
+    background-color: var(--white);
+    padding: 1rem 2rem;
+}

@@ -1,0 +1,10 @@
+<article *ngIf="products.length > 0; else noProductInCart">
+    <app-shopping-cart-list-item *ngFor="let product of products; let i = index"
+                                        [product]="product" 
+                                        [index]="i"
+                                        (delete)="onRemoveItemFromList($event)"></app-shopping-cart-list-item>
+</article>
+
+<ng-template #noProductInCart>
+    <p class="empty">Er zijn nog geen producten in de winkelwagen</p>
+</ng-template>

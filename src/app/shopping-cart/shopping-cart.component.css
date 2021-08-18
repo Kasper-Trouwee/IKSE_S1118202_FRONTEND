@@ -1,0 +1,12 @@
+main{
+    width: 100%;
+    margin-bottom: 10rem;
+}
+
+h1{
+    font-size: 300%;
+    font-weight: 400;
+    text-align: center;
+    margin: 2rem;
+    text-transform: uppercase;
+}
