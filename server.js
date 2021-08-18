@@ -5,15 +5,15 @@ function requireHTTPS(req, res, next) {
     }
     next();
 }
+
 const express = require('express');
 const app = express();
+
 app.use(requireHTTPS);
+app.use(express.static('./dist/webshop-routes'));
 
-app.use(express.static('./dist/webshop-routes.json'));
-
-app.get('/*', function(req, res) {
-    res.sendFile('index.html', {root: 'dist/webshop-routes.json/'}
-  );
-});
+app.get('/*', (req, res) =>
+    res.sendFile('index.html', {root: 'dist/webshop-routes/'}),
+);
 
 app.listen(process.env.PORT || 8080);
