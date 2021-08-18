@@ -38,7 +38,7 @@ export class ProductCreateComponent implements OnInit {
     
     
 
-    this.http.post('http://127.0.0.1:8000/api/products/create', postdata, {headers: headers})
+    this.http.post('https://ikse-api-s1118202.herokuapp.com/api/products/create', postdata, {headers: headers})
     .subscribe(res => {
       console.log("Het werkt");
     });

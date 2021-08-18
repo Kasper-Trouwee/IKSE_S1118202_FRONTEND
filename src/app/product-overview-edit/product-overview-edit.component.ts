@@ -13,7 +13,7 @@ export class ProductOverviewEditComponent implements OnInit {
 
   constructor(private http: HttpClient, private router: Router) {
     let total = 0;
-    this.http.get('http://127.0.0.1:8000/api/products').toPromise()
+    this.http.get('https://ikse-api-s1118202.herokuapp.com/api/products').toPromise()
     .then(data => {
       const length = Object.keys(data).length;
       for (let index = 0; index < length; index++) {
@@ -27,7 +27,7 @@ export class ProductOverviewEditComponent implements OnInit {
         const h5 = document.createElement("h5");
         const button = document.createElement("button");
 
-        img.src = "http://localhost:8000/" + data[index].image;
+        img.src = "https://ikse-api-s1118202.herokuapp.com/" + data[index].image;
         h3.innerHTML = data[index].productname;
         p.innerHTML = data[index].description;
         h5.innerHTML = data[index].price;

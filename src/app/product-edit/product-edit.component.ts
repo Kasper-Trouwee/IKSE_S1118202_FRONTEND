@@ -24,7 +24,7 @@ export class ProductEditComponent implements OnInit {
       id: this.id,
     }
 
-    this.http.get('http://127.0.0.1:8000/api/product/' + this.id)
+    this.http.get('https://ikse-api-s1118202.herokuapp.com/api/product/' + this.id)
     .subscribe(res => {
       console.log(res);
 
@@ -48,7 +48,7 @@ export class ProductEditComponent implements OnInit {
       'Authorization': this.token,
     });
     
-    this.http.put('http://127.0.0.1:8000/api/products/update', postdata, {headers: headers})
+    this.http.put('https://ikse-api-s1118202.herokuapp.com/api/products/update', postdata, {headers: headers})
     .subscribe(res => {
       location.replace("/producten/bewerken");
     });
@@ -65,7 +65,7 @@ export class ProductEditComponent implements OnInit {
 
     
     
-    this.http.delete('http://127.0.0.1:8000/api/products/delete/' + this.id, {headers: headers}).toPromise()
+    this.http.delete('https://ikse-api-s1118202.herokuapp.com/api/products/delete/' + this.id, {headers: headers}).toPromise()
     .then(data => {
       location.replace("/producten/bewerken");
     });

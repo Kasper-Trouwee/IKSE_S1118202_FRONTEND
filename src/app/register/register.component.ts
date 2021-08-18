@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
       password: values.password
     }
 
-    this.http.post('http://127.0.0.1:8000/api/register', postdata).toPromise()
+    this.http.post('https://ikse-api-s1118202.herokuapp.com/api/register', postdata).toPromise()
     .then(data => {
       this.router.navigate(['/login']);
     });

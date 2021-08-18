@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
       password: values.password
     }
 
-    this.http.post('http://127.0.0.1:8000/api/login', postdata).toPromise()
+    this.http.post('https://ikse-api-s1118202.herokuapp.com/api/login', postdata).toPromise()
     .then(data => {
       const token = JSON.stringify(data)
       const token_split = token.split("|");
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
         'Authorization': "Bearer " + clean_token,
       });
       
-      this.http.get('http://127.0.0.1:8000/api/user', {headers: headers}).toPromise().then(data =>{
+      this.http.get('https://ikse-api-s1118202.herokuapp.com/api/user', {headers: headers}).toPromise().then(data =>{
         localStorage.setItem("role", data["role"]);
         location.reload();
       });

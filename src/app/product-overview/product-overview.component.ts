@@ -21,7 +21,7 @@ export class ProductOverviewComponent implements OnInit {
   ngOnInit(): void {
     this.token = localStorage.getItem("token");
 
-    this.http.get('http://127.0.0.1:8000/api/products').toPromise()
+    this.http.get('https://ikse-api-s1118202.herokuapp.com/api/products').toPromise()
     .then(data => {
       const length = Object.keys(data).length;
       for (let index = 0; index < length; index++) {
@@ -40,7 +40,7 @@ export class ProductOverviewComponent implements OnInit {
           this.shoppingCartService.add(this.product);
         };
 
-        img.src = "http://localhost:8000/" + data[index].image;
+        img.src = "https://ikse-api-s1118202.herokuapp.com/" + data[index].image;
         h3.innerHTML = data[index].productname;
         p.innerHTML = data[index].description;
         h5.innerHTML = data[index].price;
