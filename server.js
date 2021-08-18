@@ -9,10 +9,10 @@ const express = require('express');
 const app = express();
 app.use(requireHTTPS);
 
-app.use(express.static('./dist/<webshop-routes.json>'));
+app.use(express.static('./dist/webshop-routes.json'));
 
 app.get('/*', function(req, res) {
-    res.sendFile('index.html', {root: 'dist/<webshop-routes.json>/'}
+    res.sendFile('index.html', {root: 'dist/webshop-routes.json/'}
   );
 });
 
